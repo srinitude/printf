@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <stdio.h> /* For testing purposes only */
 
 int _printf(const char *format, ...);
 
