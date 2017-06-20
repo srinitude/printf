@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	sum = malloc(sizeof(int));
-	if (sum == NULL)
+	if (sum == NULL || format == NULL)
 		return (0);
 	*sum = 0;
 	va_start(args, format);
