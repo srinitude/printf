@@ -9,7 +9,7 @@
 /**
  * struct conversion_specification - Here's the code for conv spec structs
  * @spec: The conversion specifier
- * @print_func - Function pointer to handle particular specifier
+ * @print_func: Function pointer to handle particular specifier
  *
  * Description: This struct consists of a conversion specifier and a
  * handler for that specifier
