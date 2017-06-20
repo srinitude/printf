@@ -2,10 +2,9 @@
 .\" Contact 215@holbertonschool.com to correct errors or typos.
 .TH _printf 3 "19 June 2017" "1.0" "Printf Program Manual"
 .SH NAME
- _printf- Individualized printf instructions for functions
+ _printf- individualized printf instructions for functions
 .SH SYNOPSIS
-.BI printf FORMAT [ARGUMENT]
-.B printf OPTION
+.BI printf (FORMAT, ARGUMENT)...
 .PP
 .B #include 'holberton.h'
 .PP
@@ -25,7 +24,7 @@ Return the number of characters printed, excluding the NULL byte used to end out
 .SH Conversion Specifiers
 A character that specifies the type of conversion to be applied.
 .TP
-.B -c,
+.B -c
 .R print (unsigned) character's of a string. Conversion state starting in the initialized state, and the resulting multibye string is written. 
 .TP
 .B -s
@@ -33,9 +32,6 @@ A character that specifies the type of conversion to be applied.
 .TP
 .B -d, i
 .R int argument is converted to a signed decimal notation
-.TP
-.B -d, i
-.R print a decimal (base 10) number
 .TP
 .B -%, %%
 .R returns a character or returns the actual sign if there is another % in front
