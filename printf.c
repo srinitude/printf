@@ -29,11 +29,6 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '%')
-			{
-				sum = print_per(sum);
-				i++;
-			}
 			for (j = 0; specs[j].spec != NULL; j++)
 			{
 				if (*(specs[j].spec) == format[i + 1])
@@ -41,6 +36,11 @@ int _printf(const char *format, ...)
 					sum = specs[j].print_func(args, sum);
 					i++;
 				}
+			}
+			if ((format[i + 1] == '%') || (format[i + 1] == ' '))
+			{
+				sum = print_per(sum);
+				i++;
 			}
 		}
 		else
