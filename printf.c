@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 					i++;
 				}
 			}
-			if ((format[i + 1] == '%') || (format[i + 1] == ' '))
+			if (format[i + 1] == '%')
 			{
 				sum = print_per(sum);
 				i++;
