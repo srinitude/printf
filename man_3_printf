@@ -1,0 +1,17 @@
+.\" Manpage for printf.
+.\" Contact 215@holbertonschool.com to correct errors or typos.
+.TH man 8 "06 May 2010" "1.0" "nuseradd man page"
+.SH NAME
+printf \- make things happenr
+.SH SYNOPSIS
+printf [USERNAME]
+.SH DESCRIPTION
+printf is a low level shell command to print the all items.  On Debian, administrators should usually use nuseradd.debian(8) instead.
+.SH OPTIONS
+The nuseradd does not take any options. However, you can supply username.
+.SH SEE ALSO
+tbd
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Alexa Inga and Kiren Srinivasan (215@holbertonschool.com)
