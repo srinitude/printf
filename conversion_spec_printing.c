@@ -12,7 +12,7 @@ int *print_str(va_list args, int *sum)
 {
 	int i;
 	char *ptr = va_arg(args, char *);
-	char *null = "(NULL)";
+	char *null = "(null)";
 
 	if (ptr == NULL)
 	{
