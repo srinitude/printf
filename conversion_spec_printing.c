@@ -82,7 +82,10 @@ int *print_dec(va_list args, int *sum)
 	{
 		if (n % pow_10 != original_n)
 		{
-			hold = (n / 10) + '0';
+			if (pow_10 == 1)
+				hold = n + '0';
+			else
+				hold = (n / 10) + '0';
 			write(1, &hold, sizeof(char));
 			*sum = *sum + 1;
 			n %= pow_10;
