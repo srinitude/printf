@@ -69,14 +69,14 @@ int *print_dec(va_list args, int *sum)
 	{
 		write(1, &minus, sizeof(char));
 		*sum = *sum + 1;
-		n *= -1;
+		n *= -1; original_n = n;
 	}
 	else if (n == -2147483648)
 	{
 		min = 1;
 		write(1, &minus, sizeof(char));
 		*sum = *sum + 1;
-		n = (n / 10) * -1;
+		n = (n / 10) * -1; original_n = n;
 	}
 	for (i = 0; i < 10; i++)
 	{
