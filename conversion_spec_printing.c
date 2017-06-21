@@ -60,10 +60,41 @@ int *print_char(va_list args, int *sum)
 
 int *print_dec(va_list args, int *sum)
 {
-	int d = va_arg(args, int);
+	int i, n, original_n, min = 0, pow_10 = 1000000000;
+	char hold, minus = '-';
 
-	write(1, &d, sizeof(int));
-	*sum = *sum + 1;
+	n = va_arg(args, int);
+	original_n = n;
+	if ((n > INT_MIN) && (n < 0))
+	{
+		write(1, &minus, sizeof(char));
+		*sum = *sum + 1;
+		n *= -1;
+	}
+	else if (n == INT_MIN)
+	{
+		min = 1;
+		write(1, &minus, sizeof(char));
+		*sum = *sum + 1;
+		n = (n / 10) * -1;
+	}
+	for (i = 0; i < 10; i++)
+	{
+		if (n % pow_10 != original_n)
+		{
+			hold = (n / 10) + '0';
+			write(1, &hold, sizeof(char));
+			*sum = *sum + 1;
+			n %= pow_10;
+		}
+		pow_10 /= 10;
+	}
+	if (min)
+	{
+		hold = 8 + '0';
+		write(1, &hold, sizeof(char));
+		*sum = *sum + 1;
+	}
 	return (sum);
 }
 
@@ -77,9 +108,5 @@ int *print_dec(va_list args, int *sum)
 
 int *print_int(va_list args, int *sum)
 {
-	int i = va_arg(args, int);
-
-	write(1, &i, sizeof(int));
-	*sum = *sum + 1;
-	return (sum);
+	return (print_dec(args, sum));
 }

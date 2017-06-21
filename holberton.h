@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h> /* For testing purposes only */
+#include <limits.h>
 
 /**
  * struct conversion_specification - Here's the code for conv spec structs
