@@ -65,13 +65,13 @@ int *print_dec(va_list args, int *sum)
 
 	n = va_arg(args, int);
 	original_n = n;
-	if ((n > INT_MIN) && (n < 0))
+	if ((n > -2147483648) && (n < 0))
 	{
 		write(1, &minus, sizeof(char));
 		*sum = *sum + 1;
 		n *= -1;
 	}
-	else if (n == INT_MIN)
+	else if (n == -2147483648)
 	{
 		min = 1;
 		write(1, &minus, sizeof(char));
@@ -85,7 +85,7 @@ int *print_dec(va_list args, int *sum)
 			if (pow_10 == 1)
 				hold = n + '0';
 			else
-				hold = (n / 10) + '0';
+				hold = (n / pow_10) + '0';
 			write(1, &hold, sizeof(char));
 			*sum = *sum + 1;
 			n %= pow_10;
