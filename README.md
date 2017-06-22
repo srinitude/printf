@@ -4,21 +4,20 @@ The functions in the printf family produce output according to a format.
 ##Description
 This is an individualized ```printf``` instructions for the usuage of functions, created by Holberton School for batch 3 students.  This project's purpose is for batch 3 students to  write their own printf function based on the C programming knowledge introduced May 1, 2017.
 ## Examples
-**Character:**```
+**Character:**  ```
 		printf("%c", 'A');
+		```
+**Output::** A
 
-**Output::**``` A
+**String:** ```
+	    printf("%s", 'This is a string.');
+	    ```
+**Output:** This is a string.
 
-**String:**```
-		 printf("%s", 'This is a string.');
-
-**Output:**``` This is a string.
-
-**Integer:**```
-		printf("%i", 5);
-
-**Output:**``` 5
-
+**Integer:**  ```
+	      printf("%i", 5);
+	      ```
+**Output:** 5
 ##Requirements
 * All your files will be compiled on Ubuntu 14.04 LTS
 * Programs and functions will be compiled with gcc 4.8.4 (C90) using the flags -Wall -Werror -Wextra and -pedantic
@@ -44,15 +43,12 @@ Number | Description
 0      | Write a function that produces output with conversion specifiers: c, s, and %.
 1      | Handle conversion specifiers: d, i.
 ## File Description
-** **conversion_spec_printing.c**
-** **holberton.h**
-** **man_3_printf**
-** **ordinary_char_printing.c**
-** **printf.c**
+* **conversion_spec_printing.c**
+* **holberton.h**
+* **man_3_printf**
+* **ordinary_char_printing.c**
+* **printf.c**
 ## Authors
 Alexa Inga | https://github.com/AlexaInga2
 
 Kiren Srinivasan | https://github.com/srinitude
-
-
-Initial README for printf project
