@@ -18,7 +18,7 @@
 .PP
 .B int _printf(const char *format, ...);
 .SH DESCRIPTION
-printf is a low level shell command to print the all items.  On Debian, administrators should usually use nuseradd.debian(8) instead.
+printf is a low level shell command to print the all items.
 .SH RETURN VALUE
 Return the number of characters printed, excluding the NULL byte used to end output to strings
 .SH Conversion Specifiers
