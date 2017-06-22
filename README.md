@@ -18,7 +18,7 @@ This is an individualized ```printf``` instructions for the usuage of functions,
 	      printf("%i", 5);
 	      ```
 **Output:** 5
-##Requirements
+## Requirements
 * All your files will be compiled on Ubuntu 14.04 LTS
 * Programs and functions will be compiled with gcc 4.8.4 (C90) using the flags -Wall -Werror -Wextra and -pedantic
 * All your files should end with a new line
